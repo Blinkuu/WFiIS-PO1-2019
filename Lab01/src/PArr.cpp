@@ -7,11 +7,10 @@ PArr::PArr(int size) : _size(size) {
 }
 
 PArr::~PArr() {
-	for(int i = 0; i < _size; ++i) {
+	for(int i = 0; i < _size; ++i)
 		delete _member[i];
-	}
 
-	delete _member;
+	delete[] _member;
 }
 
 void PArr::operator=(const PArr& arr) {
